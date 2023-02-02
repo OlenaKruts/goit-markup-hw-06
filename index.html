@@ -57,7 +57,7 @@
     <main>
       <section class="section hero">
         <h1 class="main-title">Effective Solutions for Your Business</h1>
-        <button class="service-btn" data-modal-open type="button">
+        <button type="button" class="service-btn" data-modal-open>
           Order Service
         </button>
       </section>
@@ -434,9 +434,32 @@
             </li>
           </ul>
         </div>
+        <span class="footer-subscribe-wrap">
+          <form class="footer-subscribe">
+            <span class="footer-input-wrap">
+              <label for="footer-input" class="subscribe-label"
+                >Subscribe
+              </label>
+              <input
+                id="footer-input"
+                type="email"
+                name="footer-input-email"
+                class="footer-input-email"
+                placeholder="E-mail"
+              />
+            </span>
+            <button type="submit" class="footer-submit-subscribe">
+              Subscribe
+              <svg class="footer-icon-subscribe" width="24px" height="20px">
+                <use href="./images/symbol-defs.svg#icon-icon_subm"></use>
+              </svg>
+            </button>
+          </form>
+        </span>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-modal" data-modal-close>
           <svg class="modal-icon" width="8px" height="8px">
@@ -451,26 +474,41 @@
         <form class="modal-user-form">
           <label class="modal-user-label">
             Name
-            <input
-              type="text"
-              name="user-name"
-              class="modal-user-input modal-user-name"
-          /></label>
+            <span class="modal-user-wrap">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-user-input modal-user-name"
+              />
+              <svg class="modal-icon-user" width="18px" height="18px">
+                <use href="./images/symbol-defs.svg#icon-person-black"></use>
+              </svg>
+            </span>
+          </label>
           <label class="modal-user-label">
             Phone
-            <input
-              type="tel"
-              name="user-phone"
-              class="modal-user-input modal-user-phone"
-            />
+            <span class="modal-user-wrap">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal-user-input modal-user-phone"
+              /><svg class="modal-icon-user" width="18px" height="24px">
+                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+              </svg>
+            </span>
           </label>
           <label class="modal-user-label">
             Email
-            <input
-              type="email"
-              name="user-email"
-              class="modal-user-input modal-user-email"
-            />
+            <span class="modal-user-wrap">
+              <input
+                type="email"
+                name="user-email"
+                class="modal-user-input modal-user-email"
+              />
+              <svg class="modal-icon-user" width="18px" height="24px">
+                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+              </svg>
+            </span>
           </label>
           <label class="modal-user-label" for="">
             Comment
@@ -481,11 +519,25 @@
               placeholder="Text input"
             ></textarea>
           </label>
-          <label class="modal-user-label modal-user-accept">
-            I accept the terms and conditions of the
-            <a href="">Privacy Policy</a>
-            <input type="checkbox" name="modal-user-checkbox" />
+
+          <input
+            id="privacy-policy"
+            type="checkbox"
+            name="modal-user-checkbox"
+            class="modal-user-input-policy"
+          />
+          <label
+            for="privacy-policy"
+            class="modal-user-label modal-user-accept"
+          >
+            <span class="modal-check-fake"></span>
+            <span class="accept-text"
+              >I accept the terms and conditions of the&nbsp;<a href=""
+                >Privacy Policy</a
+              ></span
+            >
           </label>
+          <button type="submit" class="modal-submit">Send</button>
         </form>
       </div>
     </div>

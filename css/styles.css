@@ -13,6 +13,8 @@
   ---bcgnd-modal: rgba(46, 47, 66, 0.4);
   --modal: #fcfcfc;
   --modal-text-accept: #757575;
+  --modal-input-text: #000000;
+  --cubik: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -427,6 +429,7 @@ footer {
 .footer-soc-menu {
   color: var(--font-hero-clr);
   margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .footer-soc-list {
@@ -456,6 +459,71 @@ footer {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: var(--footer-soc-secondary);
+}
+
+.footer-subscribe-wrap {
+  margin-left: 80px;
+}
+
+.subscribe-label {
+  display: block;
+  margin-bottom: 16px;
+}
+.subscribe-label {
+  font-weight: 500;
+
+  color: var(--font-hero-clr);
+}
+
+.footer-input-email {
+  width: 264px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  color: var(--font-hero-clr);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: inherit;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-input-email:focus {
+  border-color: var(--button-color);
+  outline: none;
+}
+
+.footer-input-email::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-submit-subscribe {
+  width: 169px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0.04em;
+
+  border: none;
+  border-radius: 4px;
+  color: var(--font-hero-clr);
+  background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.footer-icon-subscribe {
+  fill: var(--font-hero-clr);
+  /*align-items: center;*/
 }
 /*======/FOOTER/=============*/
 /*==============CUSTOMERS=================*/
@@ -500,6 +568,7 @@ footer {
 }
 
 /*==============/CUSTOMERS/=================/
+
 /*======PORTOFOLIO=============*/
 
 .page-ptf {
@@ -507,6 +576,7 @@ footer {
 }
 
 /*------MENU-FILTR-----------*/
+
 .filter-menu {
   display: flex;
   margin-bottom: 72px;
@@ -552,7 +622,9 @@ footer {
   border-color: var(--hover-color);
 }
 /*------/MENU-FILTR/-----------*/
+
 /*------CARD-SET-----------*/
+
 .card-set {
   display: flex;
   flex-wrap: wrap;
@@ -617,8 +689,11 @@ footer {
   color: var(--text-main);
 }
 /*------/CARD-SET/-----------*/
+
 /*======/PORTOFOLIO/=============*/
+
 /*=========MODAL===================*/
+
 .backdrop {
   position: fixed;
   left: 0;
@@ -656,17 +731,17 @@ footer {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal {
+  position: absolute;
   display: block;
   margin-left: auto;
-  top: 0;
-  left: 0;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color: var(--text-footer-clr);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  fill: #000000;
-  font-size: 0;
+  fill: var(--modal-input-text);
 }
 .close-modal:hover,
 .close-modal:focus {
@@ -693,11 +768,14 @@ footer {
 }
 .modal-user-accept {
   color: var(--modal-text-accept);
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-bottom: 24pdx;
 }
 
 .modal-user-input {
   width: 100%;
-  margin-bottom: 8px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -705,8 +783,10 @@ footer {
   padding-left: 38px;
   padding-bottom: 11px;
   padding-right: 11px;
+  color: var(--modal-input-text);
   font-size: 18px;
   background-color: var(--modal);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-user-textarea {
   /*display: block;*/
@@ -718,6 +798,110 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: var(--modal);
+}
+.modal-user-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-icon-user {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  fill: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-user-input:focus,
+.modal-user-textarea:focus {
+  border-color: var(--button-color);
+  outline: none;
+}
+
+.modal-user-input:focus + .modal-icon-user {
+  fill: var(--button-color);
+}
+.modal-user-textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  color: var(--modal-input-text);
+  font-size: 18px;
+  background-color: var(--modal);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-user-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+/*.modal-user-accept::before {
+  content: " ";
+  width: 13px;
+  height: 13px;
+  display: block;
+  border: 1.25px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-left: 20px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}*/
+.accept-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  margin-left: 8px;
+
+  color: var(--modal-text-accept);
+}
+
+.modal-user-input-policy:checked .modal-check-fake {
+  background-color: var(--hover-color);
+  border: 1.25px solid var(--hover-color);
+  background-image: url(/images/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.modal-user-input-policy:focus .modal-check-fake {
+  border-color: var(--button-color);
+}
+.modal-check-fake {
+  width: 13px;
+  height: 13px;
+
+  border: 1.25px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit {
+  width: 169px;
+  padding: 16px 32px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0.04em;
+
+  border: none;
+  border-radius: 4px;
+  color: var(--font-hero-clr);
+  background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 /*=========/MODAL/===================*/
