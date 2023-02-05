@@ -331,10 +331,12 @@
             </li>
           </ul>
         </div>
-
-        <form class="footer-form-subscribe">
-          <span class="footer-input-wrap">
-            <label for="footer-input" class="subscribe-label">Subscribe </label>
+        <div class="container-footer-subscribe">
+          <p class="footer-text-subscribe">Subscribe</p>
+          <form class="footer-form-subscribe">
+            <label for="footer-input" class="subscribe-label visually-hidden"
+              >Email</label
+            >
             <input
               id="footer-input"
               type="email"
@@ -342,17 +344,15 @@
               class="footer-input-email"
               placeholder="E-mail"
             />
-          </span>
-          <span class="footer-submit-wrap">
-            <button type="submit" class="footer-submit-subscribe">
-              <p class="footer-submit-title">Subscribe</p>
 
+            <button type="submit" class="footer-submit-subscribe">
+              Subscribe
               <svg class="footer-icon-subscribe" width="24px" height="20px">
                 <use href="./images/symbol-defs.svg#icon-icon_subm"></use>
               </svg>
             </button>
-          </span>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
   </body>

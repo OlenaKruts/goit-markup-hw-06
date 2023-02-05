@@ -434,10 +434,12 @@
             </li>
           </ul>
         </div>
-
-        <form class="footer-form-subscribe">
-          <span class="footer-input-wrap">
-            <label for="footer-input" class="subscribe-label">Subscribe </label>
+        <div class="container-footer-subscribe">
+          <p class="footer-text-subscribe">Subscribe</p>
+          <form class="footer-form-subscribe">
+            <label for="footer-input" class="subscribe-label visually-hidden"
+              >Email</label
+            >
             <input
               id="footer-input"
               type="email"
@@ -445,24 +447,22 @@
               class="footer-input-email"
               placeholder="E-mail"
             />
-          </span>
-          <span class="footer-submit-wrap">
-            <button type="submit" class="footer-submit-subscribe">
-              <p class="footer-submit-title">Subscribe</p>
 
+            <button type="submit" class="footer-submit-subscribe">
+              Subscribe
               <svg class="footer-icon-subscribe" width="24px" height="20px">
                 <use href="./images/symbol-defs.svg#icon-icon_subm"></use>
               </svg>
             </button>
-          </span>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-modal" data-modal-close>
-          <svg class="modal-icon" width="8px" height="8px">
+          <svg class="modal-icon-close" width="8px" height="8px">
             <use
               href="./images/symbol-defs.svg#icon-close-black-18dp-2-1"
             ></use>
@@ -473,7 +473,7 @@
         </p>
         <form class="modal-user-form">
           <label class="modal-user-label">
-            Name
+            <span class="modal-name-label">Name</span>
             <span class="modal-user-wrap">
               <input
                 type="text"
@@ -486,7 +486,7 @@
             </span>
           </label>
           <label class="modal-user-label">
-            Phone
+            <span class="modal-name-label">Phone</span>
             <span class="modal-user-wrap">
               <input
                 type="tel"
@@ -498,7 +498,7 @@
             </span>
           </label>
           <label class="modal-user-label">
-            Email
+            <span class="modal-name-label">Email</span>
             <span class="modal-user-wrap">
               <input
                 type="email"
@@ -510,11 +510,10 @@
               </svg>
             </span>
           </label>
-          <label class="modal-user-label" for="">
-            Comment
+          <label class="modal-user-label modal-area-label">
+            <span class="modal-name-label">Comment</span>
             <textarea
               name="modal-user-comment"
-              id=""
               class="modal-user-textarea"
               placeholder="Text input"
             ></textarea>
