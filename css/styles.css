@@ -793,6 +793,7 @@ footer {
   background-color: var(--cornflower);
 
   fill: var(--modal-input-text);
+  cursor: pointer;
 }
 
 .modal-icon-close {
@@ -817,6 +818,7 @@ footer {
 }
 .modal-user-label {
   margin-bottom: 8px;
+  display: block;
 }
 
 .modal-area-label {
@@ -835,7 +837,6 @@ footer {
 .modal-user-wrap {
   position: relative;
   display: block;
-  margin-bottom: 8px;
 }
 
 .modal-user-input {
