@@ -834,7 +834,7 @@ footer {
 }
 .modal-user-wrap {
   position: relative;
-
+  display: block;
   margin-bottom: 8px;
 }
 
